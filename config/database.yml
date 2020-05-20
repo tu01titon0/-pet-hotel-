@@ -2,11 +2,11 @@ default: &default
   adapter: mysql2
   encoding: utf8
   pool: 5
-  username: rootuser
-  password: ""
 
 development:
   <<: *default
+  username: rootuser
+  password: ""
   database: pet_hotel_development
 
 test:
