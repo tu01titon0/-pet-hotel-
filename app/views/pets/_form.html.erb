@@ -10,28 +10,29 @@
       </ul>
     </div>
   <% end %>
-
-  <div class="field">
+  
+  <div class="form-group">
     <%= form.label :name %>
-    <%= form.text_field :name %>
+    <%= form.text_field :name , class:"form-control" %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :gender %>
-    <%= form.text_field :gender %>
+    <%= form.text_field :gender , class:"form-control" %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :type %>
-    <%= form.text_field :type %>
+    <%= form.text_field :type , class:"form-control" %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :age %>
-    <%= form.text_field :age %>
+    <%= form.text_field :age, class:"form-control" %>
   </div>
 
   <div class="actions">
-    <%= form.submit %>
-  </div>
+    <%= form.submit class: "btn btn-primary btn-sm" %>
+  </div>  
 <% end %>
+  

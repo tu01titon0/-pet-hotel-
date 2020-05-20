@@ -12,7 +12,7 @@
 
 ActiveRecord::Schema.define(version: 2020_05_10_150238) do
 
-  create_table "listings", force: :cascade do |t|
+  create_table "listings", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name"
     t.float "price"
     t.integer "status"
@@ -20,18 +20,18 @@ ActiveRecord::Schema.define(version: 2020_05_10_150238) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  create_table "pets", force: :cascade do |t|
+  create_table "pets", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name"
     t.string "gender"
     t.string "pet_type"
     t.integer "age"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.integer "user_id"
+    t.bigint "user_id"
     t.index ["user_id"], name: "index_pets_on_user_id"
   end
 
-  create_table "users", force: :cascade do |t|
+  create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name"
     t.string "phone_number"
     t.datetime "created_at", precision: 6, null: false
